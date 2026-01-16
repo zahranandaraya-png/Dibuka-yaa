@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Pesan Untuk Kamu</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #ffd6e8, #fff);
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #5a2a44;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 400px;
+            animation: fadeIn 2s;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: #ff7aa2;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff4f87;
+            transform: scale(1.05);
+        }
+
+        .pesan {
+            display: none;
+            margin-top: 25px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>💌 Untuk Kamu</h1>
+
+    <button onclick="bukaPesan()">Baca Pesan</button>
+
+    <div class="pesan" id="pesan">
+        Hai…<br><br>
+        Aku cuma mau bilang,<br>
+        semoga hari-harimu selalu dipenuhi senyum,<br>
+        hal-hal baik datang tanpa diminta,<br>
+        dan semoga kamu selalu bahagia 🤍<br><br>
+        Terima kasih sudah hadir di dunia ini.
+        <br><br>
+        <i>— seseorang yang peduli</i>
+    </div>
+</div>
+
+<audio id="musik" loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7c4c6d95b7.mp3?filename=romantic-piano-soft-11157.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function bukaPesan() {
+    document.getElementById("pesan").style.display = "block";
+    document.getElementById("musik").play();
+}
+</script>
+
+</body>
+</html>
